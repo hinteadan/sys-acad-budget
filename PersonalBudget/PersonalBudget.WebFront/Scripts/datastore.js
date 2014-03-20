@@ -1,4 +1,4 @@
-﻿(function (m, JSON, localStorage, undefined) {
+﻿(function (JSON, localStorage, undefined) {
     'use strict';
 
     function LocalStore(entityType, entityFactory) {
@@ -76,4 +76,4 @@
     this.storage = this.storage || {};
     this.storage.LocalStore = LocalStore;
 
-}).call(this, this.model, this.JSON, this.localStorage);
+}).call(this, this.JSON, this.localStorage);
