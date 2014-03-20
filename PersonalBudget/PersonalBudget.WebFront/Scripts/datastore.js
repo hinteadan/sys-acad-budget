@@ -62,6 +62,15 @@
                 }
             };
         }
+
+        this.save = function () {
+            saveToLocalStorage();
+            return {
+                then: function (callback) {
+                    callback.call(undefined);
+                }
+            };
+        }
     }
 
     this.storage = this.storage || {};

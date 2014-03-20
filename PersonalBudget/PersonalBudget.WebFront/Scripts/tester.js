@@ -4,9 +4,12 @@
     var incomeStore = new s.LocalStore('Incomes', m.Income.fromDto),
         spendingStore = new s.LocalStore('Spendings', m.Spending.fromDto);
 
-    incomeStore.add(new m.Income(23, new Date(), 'test')).then(function (entity) { console.log(entity); });
     incomeStore.query().then(function (data) {
-        console.log(data);
+        /// <param name='data' type='Array' elementType='m.Income' />
+        console.log(data[0]);
+        data[0].amount = Math.round(Math.random() * 100);
+        console.log(data[0]);
+        incomeStore.save();
     });
 
 }).call(this, this.storage, this.model);
