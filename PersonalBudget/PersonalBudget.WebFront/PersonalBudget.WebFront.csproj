@@ -69,6 +69,7 @@
     <None Include="Scripts\_references.js" />
     <Content Include="Scripts\datastore.js" />
     <Content Include="Scripts\json3.js" />
+    <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\model.js" />
     <Content Include="Scripts\modelstore.js" />
     <Content Include="Scripts\tester.js" />

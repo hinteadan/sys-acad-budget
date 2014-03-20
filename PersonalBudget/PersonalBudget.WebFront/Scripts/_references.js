@@ -4,3 +4,4 @@
 /// <reference path="datastore.js" />
 /// <reference path="tester.js" />
 /// <reference path="modelstore.js" />
+/// <reference path="knockout-3.1.0.js" />
