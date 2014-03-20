@@ -67,7 +67,10 @@
   <ItemGroup>
     <Content Include="index.html" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\datastore.js" />
+    <Content Include="Scripts\json3.js" />
     <Content Include="Scripts\model.js" />
+    <Content Include="Scripts\tester.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
