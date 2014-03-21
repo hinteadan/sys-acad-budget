@@ -12,7 +12,7 @@
     }
     Income.fromDto = function (dto) {
         var data = new Income();
-        data.amount = dto['amount'];
+        data.amount = Number(dto['amount']);
         data.date = new Date(dto['date']);
         data.info = dto['info'];
         return data;
@@ -28,7 +28,7 @@
     }
     Spending.fromDto = function (dto) {
         var data = new Spending();
-        data.amount = dto['amount'];
+        data.amount = Number(dto['amount']);
         data.date = new Date(dto['date']);
         data.info = dto['info'];
         return data;
