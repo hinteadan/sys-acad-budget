@@ -46,9 +46,11 @@
 
             entryStore()
                 .add(constructModelEntry())
-                .then(function (data) {
-                    loc.href = 'index.html';
-                });
+                .then(goToBlotter);
+        }
+
+        function goToBlotter() {
+            loc.href = 'index.html';
         }
 
         //Public API
@@ -56,6 +58,7 @@
         this.amount = amount;
         this.note = note;
         this.add = addEntry;
+        this.viewEntries = goToBlotter;
     }
 
     this.viewModels = this.viewModels || {};

@@ -1,4 +1,4 @@
-﻿(function (ko, s, undefined) {
+﻿(function (ko, s, loc, undefined) {
     'use strict';
 
     function formatDateDisplay(date) {
@@ -26,6 +26,10 @@
     function ViewModel() {
         var entries = ko.observableArray([]);
 
+        function goToAddView() {
+            loc.href = 'add.html';
+        }
+
         function initialize() {
             s.Incomes.query()
                 .then(function (incomes) {
@@ -51,9 +55,10 @@
         initialize();
 
         this.entries = entries;
+        this.add = goToAddView;
     }
 
     this.viewModels = this.viewModels || {};
     this.viewModels.blotter = ViewModel;
 
-}).call(this, this.ko, this.storage);
+}).call(this, this.ko, this.storage, this.location);
