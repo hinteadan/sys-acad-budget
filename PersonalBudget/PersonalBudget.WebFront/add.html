@@ -10,7 +10,7 @@
 
     <h1>Add budget entry</h1>
 
-    <form>
+    <form data-bind="submit: alert">
         <fieldset>
             <legend>Entry details</legend>
             <label>
@@ -25,7 +25,7 @@
                 <textarea></textarea>
             </label>
             <br />
-            <button>Add</button>
+            <button type="submit">Add</button>
         </fieldset>
     </form>
 
