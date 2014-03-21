@@ -24,7 +24,19 @@
     };
 
     function ViewModel() {
-        var entries = ko.observableArray([]);
+        var entries = ko.observableArray([]),
+            total = ko.computed(calculateTotal);
+
+        function calculateTotal() {
+            var totalSoFar = 0;
+            if (!entries() || !entries().length) {
+                return totalSoFar;
+            }
+            for (var index in entries()) {
+                totalSoFar += entries()[index].amount;
+            }
+            return totalSoFar;
+        }
 
         function goToAddView() {
             loc.href = 'add.html';
@@ -55,6 +67,7 @@
         initialize();
 
         this.entries = entries;
+        this.total = total;
         this.add = goToAddView;
     }
 
