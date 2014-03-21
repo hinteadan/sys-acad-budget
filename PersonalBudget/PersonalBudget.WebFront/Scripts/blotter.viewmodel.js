@@ -9,19 +9,27 @@
         return date.getDate() + '/' + (date.getMonth() + 1)  + '/' + date.getFullYear();
     }
 
-    function BudgetEntry(amount, description, timestamp) {
+    function BudgetEntry(amount, description, timestamp, date) {
         this.amount = amount || 0;
         this.description = description || '';
+        this.date = date;
         this.timestamp = timestamp || null;
     }
     BudgetEntry.fromIncome = function (income) {
         /// <param name='income' type='model.Income' />
-        return new BudgetEntry(income.amount, income.info, formatDateDisplay(income.date));
+        return new BudgetEntry(income.amount, income.info, formatDateDisplay(income.date), income.date);
     };
     BudgetEntry.fromSpending = function (spending) {
         /// <param name='spending' type='model.Spending' />
-        return new BudgetEntry(-spending.amount, spending.info, formatDateDisplay(spending.date));
+        return new BudgetEntry(-spending.amount, spending.info, formatDateDisplay(spending.date), spending.date);
     };
+    BudgetEntry.sortByDate = function (a, b) {
+        /// <param name='a' type='BudgetEntry' />
+        /// <param name='b' type='BudgetEntry' />
+        return a.date < b.date ? -1 :
+            a.date > b.date ? 1 :
+            0;
+    }
 
     function ViewModel() {
         var entries = ko.observableArray([]),
@@ -52,6 +60,7 @@
                     for (var index in incomes) {
                         entries.push(BudgetEntry.fromIncome(incomes[index]));
                     }
+                    entries.sort(BudgetEntry.sortByDate);
                 });
             s.Spendings.query()
                 .then(function (spendings) {
@@ -62,6 +71,7 @@
                     for (var index in spendings) {
                         entries.push(BudgetEntry.fromSpending(spendings[index]));
                     }
+                    entries.sort(BudgetEntry.sortByDate);
                 });
         }
         initialize();
