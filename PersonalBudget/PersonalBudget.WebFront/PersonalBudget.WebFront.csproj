@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="add.html" />
+    <Content Include="Scripts\add.viewmodel.js" />
+    <Content Include="Scripts\add.wireup.js" />
     <Content Include="Scripts\blotter.viewmodel.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -6,3 +6,5 @@
 /// <reference path="knockout-3.1.0.js" />
 /// <reference path="blotter.viewmodel.js" />
 /// <reference path="blotter.wireup.js" />
+/// <reference path="add.viewmodel.js" />
+/// <reference path="add.wireup.js" />
