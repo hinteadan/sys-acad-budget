@@ -39,6 +39,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="add.html" />
+    <Content Include="css\foundation.css" />
+    <Content Include="css\normalize.css" />
     <Content Include="Scripts\add.viewmodel.js" />
     <Content Include="Scripts\add.wireup.js" />
     <Content Include="Scripts\blotter.viewmodel.js" />
@@ -54,10 +56,16 @@
     <None Include="Scripts\_references.js" />
     <Content Include="Scripts\blotter.wireup.js" />
     <Content Include="Scripts\datastore.js" />
+    <Content Include="Scripts\fastclick.js" />
+    <Content Include="Scripts\foundation.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\json3.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\model.js" />
     <Content Include="Scripts\modelstore.js" />
+    <Content Include="Scripts\modernizr.js" />
+    <Content Include="Scripts\placeholder.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
