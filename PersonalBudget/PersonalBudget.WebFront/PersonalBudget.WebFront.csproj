@@ -41,6 +41,7 @@
     <Content Include="add.html" />
     <Content Include="css\foundation.css" />
     <Content Include="css\normalize.css" />
+    <Content Include="css\styles.css" />
     <Content Include="Scripts\add.viewmodel.js" />
     <Content Include="Scripts\add.wireup.js" />
     <Content Include="Scripts\blotter.viewmodel.js" />
