@@ -36,12 +36,14 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="3"><strong data-bind="text: total, css: { 'text-success': total() > 0, 'text-danger': total() <= 0 }"></strong> RON</td>
+                <td colspan="3"><h4 class="inline"><strong data-bind="text: total, css: { 'text-success': total() > 0, 'text-danger': total() <= 0 }"></strong></h4> RON</td>
             </tr>
         </tfoot>
     </table>
 
-    <button data-bind="click: add">Add entry</button>
+    <div class="well">
+        <button data-bind="click: add" class="btn btn-lg btn-primary btn-block">Add entry</button>
+    </div>
 
     <script src="Scripts/datastore.js"></script>
     <script src="Scripts/model.js"></script>
