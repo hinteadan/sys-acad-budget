@@ -37,31 +37,36 @@
     <form data-bind="submit: add">
         <fieldset>
             <legend>Entry details</legend>
-            <label>
-                Income
-                <input type="radio" name="entryType" data-bind="checkedValue: model.Income, checked: entryType" />
-            </label>
-            /
-            <label>
-                Spending
-                <input type="radio" name="entryType" data-bind="checkedValue: model.Spending, checked: entryType" />
-            </label>
-            <br />
-            <label>
-                Amount:
-                <input type="number" step="0.5" data-bind="value: amount" />
-                RON
-            </label>
-            <br />
-            <label>
-                Notes:
-                <br />
-                <textarea placeholder="Brief description of the budget entry" data-bind="value: note"></textarea>
-            </label>
-            <br />
-            <button type="submit">Add</button>
-            <button data-bind="click: viewEntries">View Entries</button>
+
+            <div class="row">
+                <input id="income" type="radio" name="entryType" data-bind="checkedValue: model.Income, checked: entryType" />
+                <label for="income">Income</label>
+                <input id="spending" type="radio" name="entryType" data-bind="checkedValue: model.Spending, checked: entryType" />
+                <label for="spending">Spending</label>
+            </div>
+            <div class="row">
+                <label>
+                    Amount:
+                    <div class="row collapse">
+                        <div class="small-10 columns">
+                            <input type="number" step="0.5" data-bind="value: amount" />
+                        </div>
+                        <div class="small-2 columns">
+                            <span class="postfix radius">RON</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="row">
+                <label>
+                    Notes:
+                    <textarea class="resize-vertical" placeholder="Brief description of the budget entry" data-bind="value: note"></textarea>
+                </label>
+            </div>
         </fieldset>
+
+        <button type="submit" class="button expand">Add</button>
+        <button data-bind="click: viewEntries" class="button secondary expand tiny">View Entries</button>
     </form>
 
     <script src="Scripts/datastore.js"></script>
