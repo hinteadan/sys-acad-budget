@@ -10,7 +10,14 @@
 </head>
 <body>
 
-    <h1>Add budget entry</h1>
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <a href="index.html" class="pure-menu-heading">Personal Budget Planner</a>
+
+        <ul>
+            <li><i>Adding a budget entry...</i></li>
+            <li><a href="javascript:void(0);" data-bind="click: viewEntries">&laquo; Back to entries list</a></li>
+        </ul>
+    </div>
 
     <form data-bind="submit: add">
         <fieldset>
