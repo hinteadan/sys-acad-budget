@@ -19,30 +19,34 @@
         </div>
     </nav>
 
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th>Amount (RON)</th>
-                <th>Description</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody data-bind="foreach: entries">
-            <tr>
-                <td data-bind="text: amount, css: { 'text-success': amount > 0, 'text-danger': amount <= 0 }"></td>
-                <td data-bind="text: description"></td>
-                <td data-bind="text: timestamp"></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3"><h4 class="inline"><strong data-bind="text: total, css: { 'text-success': total() > 0, 'text-danger': total() <= 0 }"></strong></h4> RON</td>
-            </tr>
-        </tfoot>
-    </table>
+    <div class="container-fluid">
 
-    <div class="well">
-        <button data-bind="click: add" class="btn btn-lg btn-primary btn-block">Add entry</button>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Amount (RON)</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: entries">
+                <tr>
+                    <td data-bind="text: amount, css: { 'text-success': amount > 0, 'text-danger': amount <= 0 }"></td>
+                    <td data-bind="text: description"></td>
+                    <td data-bind="text: timestamp"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><h4 class="inline"><strong data-bind="text: total, css: { 'text-success': total() > 0, 'text-danger': total() <= 0 }"></strong></h4> RON</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="well">
+            <button data-bind="click: add" class="btn btn-lg btn-primary btn-block">Add entry</button>
+        </div>
+
     </div>
 
     <script src="Scripts/datastore.js"></script>
@@ -50,6 +54,5 @@
     <script src="Scripts/modelstore.js"></script>
     <script src="Scripts/blotter.viewmodel.js"></script>
     <script src="Scripts/blotter.wireup.js"></script>
-
 </body>
 </html>
