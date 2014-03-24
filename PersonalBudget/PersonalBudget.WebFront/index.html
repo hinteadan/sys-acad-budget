@@ -5,7 +5,7 @@
 
     <script src="Scripts/json3.js"></script>
     <script src="Scripts/knockout-3.1.0.debug.js"></script>
-    
+
     <script src="Scripts/modernizr.js"></script>
     <script src="Scripts/jquery.js"></script>
     <script src="Scripts/jquery.cookie.js"></script>
@@ -18,7 +18,19 @@
 </head>
 <body>
 
-    <h1>Personal Budget Planner</h1>
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="index.html">Personal Budget Planner</a></h1>
+            </li>
+        </ul>
+
+        <section class="top-bar-section">
+            <ul class="left">
+                <li><a href="javascript:void(0);" data-bind="click: add">Add Entry</a></li>
+            </ul>
+        </section>
+    </nav>
 
     <table>
         <thead>
