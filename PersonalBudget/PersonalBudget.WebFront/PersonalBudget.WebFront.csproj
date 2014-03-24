@@ -39,6 +39,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="add.html" />
+    <Content Include="css\pure-nr.css" />
+    <Content Include="css\pure.css" />
     <Content Include="Scripts\add.viewmodel.js" />
     <Content Include="Scripts\add.wireup.js" />
     <Content Include="Scripts\blotter.viewmodel.js" />
