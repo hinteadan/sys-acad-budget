@@ -1,3 +1,8 @@
 ﻿table {
     width: 100%;
 }
+
+.button-block {
+    display: block;
+    width: 100%;
+}
