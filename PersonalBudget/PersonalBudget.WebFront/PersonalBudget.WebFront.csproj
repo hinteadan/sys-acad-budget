@@ -39,9 +39,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="add.html" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\add.viewmodel.js" />
     <Content Include="Scripts\add.wireup.js" />
     <Content Include="Scripts\blotter.viewmodel.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -53,7 +59,9 @@
     <Content Include="index.html" />
     <None Include="Scripts\_references.js" />
     <Content Include="Scripts\blotter.wireup.js" />
+    <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\datastore.js" />
+    <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\json3.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\model.js" />
