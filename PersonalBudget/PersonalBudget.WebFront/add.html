@@ -21,33 +21,42 @@
         </div>
     </nav>
 
-    <form data-bind="submit: add">
+    <form role="form" data-bind="submit: add">
         <fieldset>
             <legend>Entry details</legend>
-            <label>
-                Income
-                <input type="radio" name="entryType" data-bind="checkedValue: model.Income, checked: entryType" />
-            </label>
-            /
-            <label>
-                Spending
-                <input type="radio" name="entryType" data-bind="checkedValue: model.Spending, checked: entryType" />
-            </label>
-            <br />
-            <label>
-                Amount:
-                <input type="number" step="0.5" data-bind="value: amount" />
-                RON
-            </label>
-            <br />
-            <label>
-                Notes:
-                <br />
-                <textarea placeholder="Brief description of the budget entry" data-bind="value: note"></textarea>
-            </label>
-            <br />
-            <button type="submit">Add</button>
-            <button data-bind="click: viewEntries">View Entries</button>
+
+            <div class="form-group">
+                <div class="btn-group btn-group-lg btn-group-justified">
+                    <div class="btn-group btn-group-lg">
+                        <button type="button" class="btn btn-info" data-bind="click: function(){ entryType(model.Income); }, css: { 'active': entryType() === model.Income }">Income</button>
+                    </div>
+                    <div class="btn-group btn-group-lg">
+                        <button type="button" class="btn btn-warning" data-bind="click: function(){ entryType(model.Spending); },css: { 'active': entryType() === model.Spending }">Spending</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">
+                    Amount:
+                </label>
+                <div class="input-group">
+                    <input id="amount" type="number" step="0.5" class="form-control" data-bind="value: amount" />
+                    <span class="input-group-addon">RON</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">
+                    Notes:
+                </label>
+                <textarea id="notes" class="form-control resize-vertical" placeholder="Brief description of the budget entry" data-bind="value: note"></textarea>
+            </div>
+
+            <div class="well">
+                <button type="submit"  data-bind="click: add" class="btn btn-lg btn-primary btn-block">Add</button>
+                <button type="button" data-bind="click: viewEntries" class="btn btn-sm btn-default btn-block">View Entries</button>
+            </div>
         </fieldset>
     </form>
 

@@ -5,3 +5,7 @@
 .inline {
     display: inline;
 }
+
+.resize-vertical {
+    resize: vertical;
+}
