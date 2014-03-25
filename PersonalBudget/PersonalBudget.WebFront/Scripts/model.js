@@ -21,6 +21,11 @@
         this.iconUrl = null;
     }
 
-    
+    //This is how we expose stuff in JS
+    this.model = {
+        Income: Income,
+        Spending: Spending,
+        Category: Category
+    };
 
 }).call(this);

@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\add.viewmodel.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,6 +66,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add.html" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\knockout.js" />
+    <Content Include="Scripts\localstore.js" />
+    <Content Include="Scripts\model.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\modelstore.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
