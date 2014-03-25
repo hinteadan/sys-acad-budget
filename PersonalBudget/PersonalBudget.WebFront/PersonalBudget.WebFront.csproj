@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="add.html" />
     <Content Include="index.html" />
+    <Content Include="Scripts\blotter.viewmodel.js" />
     <Content Include="Scripts\knockout.js" />
     <Content Include="Scripts\localstore.js" />
     <Content Include="Scripts\model.js" />
